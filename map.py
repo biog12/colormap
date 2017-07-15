@@ -21,7 +21,7 @@ def map_x(x,y,z,vmin,vmax,step):
     cmap = plt.cm.rainbow
     cmap.set_over('k')
     cmap.set_under('r')
-    bounds = np.arange(vmin,vmax,step)
+    bounds = np.arange(vmin,vmax+step,step)
     plt.scatter(x,y,c=z,cmap = cmap,s=100,marker=',',vmin=vmin,vmax=vmax)
     plt.colorbar(extend='both',ticks=bounds)
 #画图    
